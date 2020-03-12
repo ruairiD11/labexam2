@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmployeeList.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">labexam2</a> &gt; <a href="index.source.html" class="el_package">ie.gmit</a> &gt; <span class="el_source">EmployeeList.java</span></div><h1>EmployeeList.java</h1><pre class="source lang-java linenums">package ie.gmit;
+
+import java.util.ArrayList;
+
+public class EmployeeList {
+    private ArrayList&lt;Employee&gt; employeeList;
+
+<span class="fc" id="L8">    public EmployeeList() { employeeList = new ArrayList&lt;Employee&gt;(); }</span>
+
+    public void addEmployee(Employee employee) {
+<span class="fc" id="L11">        employeeList.add(employee);</span>
+
+        // Loop through current array list
+        // Check if employee exists already
+
+        /*for(Employee e : employeeList) {
+            if (e.getID().equals(employee.getID())) {
+                throw new IllegalArgumentException(&quot;Employee already exists!&quot;);
+            }
+            else {
+                employeeList.add(employee);
+            }
+        }*/
+<span class="fc" id="L24">    }</span>
+
+    public int getListSize() {
+<span class="fc" id="L27">        int count = 0;</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        for (Employee e : employeeList)</span>
+<span class="fc" id="L29">            count++;</span>
+
+<span class="fc" id="L31">        return count;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
